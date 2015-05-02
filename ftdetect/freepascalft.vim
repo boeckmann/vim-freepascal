@@ -1,2 +1,2 @@
-au BufNewFile *.pas,*.pp setlocal filetype=freepascal
+au BufNewFile,BufRead *.pas,*.pp setlocal filetype=freepascal
 
