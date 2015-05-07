@@ -55,7 +55,7 @@ syn keyword pascalAssignment		assign
 syn keyword pascalConstant		false maxint nil true
 syn keyword pascalConditional		case else if of on then
 syn keyword pascalException		try except finally raise
-syn keyword pascalRepeat		do downto for repeat to until while
+syn keyword pascalRepeat		do downto for repeat to until while break continue
 
 syn keyword pascalComparator		in is
 syn match pascalComparator 		"<"
@@ -64,9 +64,13 @@ syn match pascalComparator 		">"
 
 syn keyword pascalType			TDate TDateTime THandle TRect TTime array boolean byte cardinal char
 syn match pascalType			"class("me=e-1,he=e-1
-syn keyword pascalType			double dword extended file float input integer keyboard long longint
-syn keyword pascalType			longstring object output pchar pointer real resourcestring set short
-syn keyword pascalType			shortstring string threadvar variant word UTF8String UTF8 UTF16String
+syn keyword pascalType			double dword extended file float input int8 int16 int32 int64 integer
+syn keyword pascalType                  keyboard long longint longword
+syn keyword pascalType			longstring object output pchar pointer ptrint qword real resourcestring
+syn keyword pascalType                  set short sizeint
+syn keyword pascalType			ansistring shortstring string threadvar
+syn keyword pascalType                  uint8 uint16 uint32 uint64
+syn keyword pascalType                  variant word UTF8String UTF8 UTF16String
 syn keyword pascalType			UTF16		 
 
 syn keyword pascalFunction		procedure function
@@ -100,7 +104,7 @@ syn keyword pascalObject		TTabNoteBook TTabSheet TPageControl TTimer TUpDown TSp
 
 "  virtual
 syn keyword pascalModifier		inline external assembler near far absolute
-syn keyword pascalModifier		interrupt interactive packed dispinterface out automated
+syn keyword pascalModifier		interrupt interactive packed bitpacked dispinterface out automated
 syn keyword pascalModifier		at default nodefault dispid implements message
 syn keyword pascalModifier		readonly writeonly resident stored
 
